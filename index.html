@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Zrcadlo</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="stage">
+      <canvas id="surface"></canvas>
+      <div id="card" class="card" aria-hidden="true">
+        <div class="card-chip"></div>
+        <div class="card-stripe"></div>
+      </div>
+      <div id="nose" class="nose" aria-hidden="true">
+        <svg viewBox="0 0 64 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M32 6c-9 0-16 8-16 20 0 10 4 18 8 24 2 3 4 8 8 10 4-2 6-7 8-10 4-6 8-14 8-24C48 14 41 6 32 6z"
+            fill="#e8c4a8"
+            stroke="#c49a7a"
+            stroke-width="2"
+          />
+          <ellipse cx="24" cy="42" rx="4" ry="6" fill="#3a2a22" opacity="0.75" />
+          <ellipse cx="40" cy="42" rx="4" ry="6" fill="#3a2a22" opacity="0.75" />
+        </svg>
+      </div>
+      <button id="draw-btn" type="button" class="btn">Další</button>
+    </main>
+    <script src="app.js"></script>
+  </body>
+</html>
