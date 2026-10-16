@@ -616,7 +616,7 @@
 
       if (touches.size === 1) {
         const t = [...touches.values()][0];
-      pointer.down = true;
+        pointer.down = true;
         pointer.x = t.x;
         pointer.y = t.y;
         pointer.inside = true;
