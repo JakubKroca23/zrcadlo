@@ -1,14 +1,14 @@
 # Zrcadlo
 
-Interaktivní webovka (černé pozadí, 3 čáry, karta dvěma prsty, tlačítko Další).
+Interaktivní webovka.
 
-## Odkazy
+## Trvalý odkaz (GitHub Pages)
 
-- **GitHub Pages:** https://jakubkroca23.github.io/zrcadlo/
-- **Repo:** https://github.com/JakubKroca23/zrcadlo
+https://jakubkroca23.github.io/zrcadlo/
 
-## Zapnutí Pages (jednou)
+Zapni Pages jednou: https://github.com/JakubKroca23/zrcadlo/settings/pages  
+→ **Deploy from a branch** → `main` / `/ (root)` → **Save**
 
-1. Otevři https://github.com/JakubKroca23/zrcadlo/settings/pages
-2. **Source:** Deploy from a branch
-3. Branch: `main` / folder `/ (root)` → Save
+## Repo
+
+https://github.com/JakubKroca23/zrcadlo
