@@ -1,0 +1,137 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+  font-family: system-ui, -apple-system, sans-serif;
+  touch-action: none;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #000;
+}
+
+#surface {
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  touch-action: none;
+}
+
+.nose {
+  position: absolute;
+  width: 48px;
+  height: 54px;
+  pointer-events: none;
+  z-index: 5;
+  opacity: 0;
+  transform: translate(-50%, -40%) scale(0.92);
+  transition: opacity 0.12s ease;
+  filter: drop-shadow(0 6px 8px rgba(0, 0, 0, 0.5));
+}
+
+.nose.visible {
+  opacity: 1;
+}
+
+.nose.snorting {
+  animation: snort-pulse 0.18s ease-in-out infinite alternate;
+}
+
+.nose svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.card {
+  position: absolute;
+  width: 118px;
+  height: 74px;
+  margin-left: -59px;
+  margin-top: -37px;
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: 7;
+  opacity: 0;
+  transform: rotate(0deg) scale(0.92);
+  background: linear-gradient(145deg, #f2f0e8 0%, #d8d2c4 45%, #c4bdb0 100%);
+  box-shadow:
+    0 10px 28px rgba(0, 0, 0, 0.55),
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(80, 70, 55, 0.35);
+  transition: opacity 0.1s ease;
+}
+
+.card.visible {
+  opacity: 1;
+}
+
+.card-chip {
+  position: absolute;
+  left: 14px;
+  top: 18px;
+  width: 22px;
+  height: 16px;
+  border-radius: 3px;
+  background: linear-gradient(160deg, #e6c15a, #b8922e);
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.2);
+}
+
+.card-stripe {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 42px;
+  height: 14px;
+  background: linear-gradient(90deg, #2a2a2a, #4a4a4a 40%, #1f1f1f);
+  opacity: 0.85;
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  bottom: max(1.25rem, env(safe-area-inset-bottom));
+  transform: translateX(-50%);
+  z-index: 8;
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  background: #111;
+  color: #fff;
+  font-size: 1.05rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.85rem 1.8rem;
+  border-radius: 999px;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.btn:active {
+  background: #222;
+}
+
+@keyframes snort-pulse {
+  from {
+    transform: translate(-50%, -40%) scale(0.95);
+  }
+  to {
+    transform: translate(-50%, -48%) scale(1.05);
+  }
+}
